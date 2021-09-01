@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+.navbar{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-heading{
+    color:#fff;
+    padding:20px 0;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 900;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar-btn{
+    padding:15px;
+    margin:200px;
+    outline:none;
+    border:none;
+    font-size:20px;
+    background-color: #000;
+    color:#fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-btn:hover{
+    color:#000;
+    background-color: #fff;
+    border:2px solid #000;
+    cursor:pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.card-container{
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    flex-wrap: wrap;
+    margin:30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:2px solid #000;
+    margin:20px;
+    padding:10px;
+    background-color:#000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+.card:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.card-top{
+    width:100%;
+}
+.card-img{
+    height:250px;
+    width:100%;
+}
+.card-bottom{
+    color:#fff;
+}
+.loading{
+    display:flex;
+    justify-content:center;
+    margin-top:50px;
+}
+.loading::after{
+    content:"";
+    height:300px;
+    width:300px;
+    border:30px solid #ddd;
+    border-top:30px solid #000;
+    border-radius:50%;
+    animation: loading 1s linear infinite;
+}
+@keyframes loading{
+    to{
+        transform:rotate(1turn);
+    }
 }
